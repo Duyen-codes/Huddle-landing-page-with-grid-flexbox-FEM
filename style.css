@@ -156,6 +156,11 @@ footer {
   font-family: var(--ff-openSans);
 }
 
+footer .logo-icon {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(294deg)
+    brightness(105%) contrast(106%);
+}
+
 footer section:not(:first-of-type) {
   margin-bottom: 5rem;
 }
