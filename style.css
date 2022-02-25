@@ -88,8 +88,7 @@ nav {
   font-family: var(--ff-openSans);
   font-weight: var(--fw-openSans-700);
   color: var(--Very-Dark-Cyan);
-  width: 130px;
-  height: 35px;
+  padding: 10px 40px;
   border-radius: 30px;
   background: white;
   cursor: pointer;
@@ -120,7 +119,7 @@ h1 {
   color: white;
   border: 1px solid green;
   background: var(--Pink);
-  padding: 1.5rem 8rem;
+  padding: 15px 45px;
   border-radius: 30px;
   border: none;
 }
@@ -131,6 +130,7 @@ main {
   flex-flow: column nowrap;
   gap: 4rem;
   padding: 4rem 2rem 30rem;
+  position: relative;
 }
 
 .section {
@@ -152,11 +152,12 @@ main {
 footer {
   background: var(--Very-Dark-Cyan);
   color: white;
-  padding: 0 2rem 5rem;
+  padding: 150px 3rem 2rem;
   font-family: var(--ff-openSans);
 }
 
-footer .logo-icon {
+.footer-logo-icon {
+  width: 240px;
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(294deg)
     brightness(105%) contrast(106%);
 }
@@ -167,25 +168,16 @@ footer section:not(:first-of-type) {
 
 /* Footer community section  */
 .community {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translate(50%, 50%);
   padding: 5rem 3rem 6rem;
   background: white;
   border-radius: 20px;
   width: 100%;
   max-width: 600px;
-  margin-inline: auto;
-  transform: translateY(-50%);
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.3);
-}
-
-.footer-start-free-btn {
-  font-family: var(--ff-poppins);
-  color: white;
-  border: 1px solid green;
-  background: var(--Pink);
-  padding: 1.5rem 7rem;
-  border-radius: 30px;
-  border: none;
-  font-size: 1.4rem;
 }
 
 .community h2 {
@@ -197,6 +189,29 @@ footer section:not(:first-of-type) {
   border: 1px solid white;
 }
 
+/* footer-logo  */
+.footer-logo {
+  text-align: left;
+}
+
+/* Footer-content  */
+.footer-content {
+  display: grid;
+}
+
+.footer-content li {
+  margin: 1rem 0;
+}
+
+.footer-col3 ul {
+  margin: 0 auto;
+  display: flex;
+  width: max-content;
+}
+
+.footer-col3 ul li {
+  margin: 0 10px;
+}
 /* footer contacts section  */
 
 .contacts {
@@ -262,35 +277,6 @@ footer section:not(:first-of-type) {
     padding-bottom: 25rem;
   }
 
-  .section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 10rem;
-    place-items: center;
-    text-align: left;
-    padding-inline-start: 8rem;
-    padding-block-end: 4rem;
-  }
-
-  .grow-section .section-content {
-    grid-column: 1 / 2;
-    grid-row: 1/2;
-  }
-
-  .grow-section .grow-img {
-    grid-column: 2/3;
-  }
-
-  .user-section .section-content {
-    grid-column: 1/2;
-    grid-row: 1/2;
-  }
-
-  .user-section .user-img {
-    grid-column: 2/3;
-  }
-
   /* links section  */
   .links {
     display: flex;
@@ -301,21 +287,8 @@ footer section:not(:first-of-type) {
     padding-left: 10rem;
   }
 
-  .footer-flex-container {
-    display: flex;
-    gap: 10rem;
-  }
-
-  .footer-flex-container > * {
-    flex: 1;
-  }
-
-  .copyright-container {
-    align-self: end;
-  }
-
-  .copyright-container {
-    text-align: right;
-    margin-right: 4rem;
+  /* Footer-content  */
+  .footer-content {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
